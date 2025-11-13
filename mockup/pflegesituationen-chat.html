@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betreuung in Pflegesituationen - KI-Lerncoach</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- User Toggle Buttons -->
+    <div class="user-toggle">
+        <a href="login.html" class="user-toggle-btn active">Betreuer</a>
+        <a href="admin.html" class="user-toggle-btn">Admin</a>
+    </div>
+    <div class="phone-frame">
+        <div class="header">
+            <a href="learning-path.html" class="menu-icon" style="text-decoration: none; color: inherit;"><img src="https://img.icons8.com/?id=26194&format=png&size=72" alt="Back" class="icon-white" style="vertical-align: middle;"></a>
+            <h1><img src="https://img.icons8.com/?id=37814&format=png&size=72" alt="Books" class="icon-white" style="vertical-align: middle;"> Pflegesituationen</h1>
+            <span class="lang-selector"><img src="https://img.icons8.com/?id=3685&format=png&size=72" alt="Language" class="icon-white" style="vertical-align: middle;"> DE</span>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message coach clearfix">
+                <div class="message-bubble">
+                    Hallo Maria! In diesem Modul geht es um die <strong>Betreuung in Pflegesituationen</strong>. Du lernst, wie du Menschen mit erhöhtem Pflegebedarf kompetent begleiten und unterstützen kannst.
+                </div>
+                <div class="message-time">14:30</div>
+                <div class="feedback-buttons">
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2744&format=png&size=48" alt="Thumbs up"></button>
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2913&format=png&size=48" alt="Thumbs down"></button>
+                </div>
+            </div>
+
+            <div class="message coach clearfix">
+                <div class="message-bubble">
+                    Ein wichtiger Aspekt ist die Beobachtung von Veränderungen im Gesundheitszustand. Stell dir vor, Herr Weber wirkt heute sehr verwirrt und desorientiert – anders als sonst. Was würdest du tun?
+                </div>
+                <div class="message-time">14:31</div>
+                <div class="feedback-buttons">
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2744&format=png&size=48" alt="Thumbs up"></button>
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2913&format=png&size=48" alt="Thumbs down"></button>
+                </div>
+            </div>
+
+            <div class="message user clearfix">
+                <div class="message-bubble">
+                    Ich würde die Situation genau beobachten und dokumentieren, seine Vitalzeichen prüfen wenn möglich, und den Pflegedienst oder Arzt informieren.
+                </div>
+                <div class="message-time">14:33</div>
+            </div>
+
+            <div class="message coach clearfix">
+                <div class="message-bubble">
+                    Ausgezeichnet! Du hast alle wichtigen Schritte genannt: Beobachten, Dokumentieren und professionelle Hilfe hinzuziehen. Das zeigt, dass du die Grenzen deiner Rolle kennst. Lass uns nun besprechen, wie du in solchen Situationen auch beruhigend auf die Person einwirken kannst.
+                </div>
+                <div class="message-time">14:34</div>
+                <div class="feedback-buttons">
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2744&format=png&size=48" alt="Thumbs up"></button>
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2913&format=png&size=48" alt="Thumbs down"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Bar Container -->
+        <div style="background: white; border-top: 1px solid #ddd; padding: 12px 15px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-size: 14px; font-weight: 600; color: #6c757d;">Fortschritt</span>
+                <span style="font-size: 14px; font-weight: 600; color: #C96B7E;">0%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 0%; background: #C96B7E;"></div>
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" placeholder="Nachricht eingeben..." id="chat-input">
+            <button class="send-btn" onclick="sendMessage()"><img src="https://img.icons8.com/?id=398&format=png&size=72" alt="Send" class="icon-white" style="vertical-align: middle;"></button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+
+            if (message) {
+                const messagesContainer = document.getElementById('chat-messages');
+
+                // Add user message
+                const userMsg = document.createElement('div');
+                userMsg.className = 'message user clearfix';
+                userMsg.innerHTML = `
+                    <div class="message-bubble">${message}</div>
+                    <div class="message-time">${new Date().toLocaleTimeString('de-DE', {hour: '2-digit', minute:'2-digit'})}</div>
+                `;
+                messagesContainer.appendChild(userMsg);
+
+                // Clear input
+                input.value = '';
+
+                // Scroll to bottom
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+                // Simulate coach response
+                setTimeout(() => {
+                    const coachMsg = document.createElement('div');
+                    coachMsg.className = 'message coach clearfix';
+                    coachMsg.innerHTML = `
+                        <div class="message-bubble">Das ist ein wichtiger Punkt! Lass uns gemeinsam verschiedene Ansätze erkunden, wie du in herausfordernden Pflegesituationen reagieren kannst.</div>
+                        <div class="message-time">${new Date().toLocaleTimeString('de-DE', {hour: '2-digit', minute:'2-digit'})}</div>
+                        <div class="feedback-buttons">
+                            <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2744&format=png&size=48" alt="Thumbs up"></button>
+                            <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2913&format=png&size=48" alt="Thumbs down"></button>
+                        </div>
+                    `;
+                    messagesContainer.appendChild(coachMsg);
+                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                }, 1000);
+            }
+        }
+
+        // Allow Enter key to send message
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatInput = document.getElementById('chat-input');
+            if (chatInput) {
+                chatInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        sendMessage();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

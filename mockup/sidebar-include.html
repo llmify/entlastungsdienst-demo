@@ -1,0 +1,63 @@
+<!-- Sidebar Overlay -->
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <h2 data-translate="menu">Menü</h2>
+        <button class="sidebar-close" id="sidebar-close">×</button>
+    </div>
+    <div class="sidebar-content">
+        <ul class="sidebar-menu">
+            <li>
+                <a href="admin.html">
+                    <img src="https://img.icons8.com/?id=2672&format=png&size=72" alt="Admin">
+                    <span data-translate="admin_panel">Geschäftsstelle</span>
+                </a>
+            </li>
+            <li>
+                <a href="login.html" class="logout-link">
+                    <img src="https://img.icons8.com/?id=2445&format=png&size=72" alt="Logout" style="filter: brightness(0) saturate(100%) invert(27%) sepia(94%) saturate(2613%) hue-rotate(343deg) brightness(89%) contrast(90%);">
+                    <span data-translate="logout">Abmelden</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="sidebar-footer">
+        <div class="sidebar-user">
+            <div class="sidebar-user-avatar">MM</div>
+            <div class="sidebar-user-info">
+                <div class="sidebar-user-name">Maria Muster</div>
+                <div class="sidebar-user-email">maria.muster@example.ch</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Sidebar functionality
+    const menuIcon = document.getElementById('menu-icon');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+    const sidebarClose = document.getElementById('sidebar-close');
+
+    function openSidebar() {
+        sidebar.classList.add('active');
+        sidebarOverlay.classList.add('active');
+    }
+
+    function closeSidebar() {
+        sidebar.classList.remove('active');
+        sidebarOverlay.classList.remove('active');
+    }
+
+    if (menuIcon) {
+        menuIcon.addEventListener('click', openSidebar);
+    }
+    if (sidebarClose) {
+        sidebarClose.addEventListener('click', closeSidebar);
+    }
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', closeSidebar);
+    }
+</script>

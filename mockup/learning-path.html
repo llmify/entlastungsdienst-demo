@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Lernpfad - KI-Lerncoach</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="translations.js"></script>
+</head>
+<body>
+    <!-- User Toggle Buttons -->
+    <div class="user-toggle">
+        <a href="login.html" class="user-toggle-btn active">Betreuer</a>
+        <a href="admin.html" class="user-toggle-btn">Admin</a>
+    </div>
+    <div class="phone-frame">
+        <div class="header">
+            <a href="dashboard.html" class="menu-icon" style="text-decoration: none; color: inherit;"><img src="https://img.icons8.com/?id=26194&format=png&size=72" alt="Back" class="icon-white" style="vertical-align: middle;"></a>
+            <h1 data-translate="my_learning_path">Mein Lernpfad</h1>
+            <span class="lang-selector"><img src="https://img.icons8.com/?id=3685&format=png&size=72" alt="Language" class="icon-white" style="vertical-align: middle;"> DE</span>
+        </div>
+        <div class="content">
+            <h2 style="margin-bottom: 20px;" data-translate="your_personalized_path">Dein personalisierter Lernweg</h2>
+
+            <div class="info-box" style="background: #fff3cd; border-color: #ffa500;">
+                <p><img src="https://img.icons8.com/?id=75&format=png&size=72" alt="Idea" style="vertical-align: middle;"> <strong data-translate="assessment_recommendation">Empfehlung aus deinem Assessment:</strong> <span data-translate="assessment_recommendation_text">Basierend auf deiner Kompetenz-Einstufung empfehlen wir dir, mit den markierten Bereichen zu beginnen.</span></p>
+            </div>
+
+            <div class="path-item">
+                <div class="card" style="background: #d4edda; border-color: #28a745;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 24px;"><img src="https://img.icons8.com/?id=11695&format=png&size=72" alt="Check"></span>
+                        <div style="flex: 1;">
+                            <div class="card-title">1. <span data-translate="self_care">Selbstsorge</span></div>
+                            <div style="color: #28a745; font-size: 14px;" data-translate="completed_100">Abgeschlossen (100%)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="path-item">
+                <a href="learning-chat.html" class="card" style="background: #fff3cd; border-color: #ffa500; display: block; text-decoration: none; color: inherit; box-shadow: 0 2px 8px rgba(255, 165, 0, 0.2);">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 24px;"><img src="https://img.icons8.com/?id=398&format=png&size=72" alt="Play"></span>
+                        <div style="flex: 1;">
+                            <div class="card-title">2. <span data-translate="meaningful_activities">Sinnstiftende Alltagsgestaltung</span></div>
+                            <div style="color: #ffa500; font-size: 14px; font-weight: 600;" data-translate="in_progress_40">In Arbeit (40%) • Vom Assessment empfohlen</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="path-item">
+                <a href="soziale-teilhabe-chat.html" class="card" style="display: block; text-decoration: none; color: inherit; border: 2px solid #ffa500; box-shadow: 0 2px 8px rgba(255, 165, 0, 0.15);">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 24px;"><img src="https://img.icons8.com/?id=37814&format=png&size=72" alt="Books"></span>
+                        <div style="flex: 1;">
+                            <div class="card-title">3. <span data-translate="social_participation">Soziale Teilhabe</span></div>
+                            <div style="color: #6c757d; font-size: 14px;" data-translate="not_started_0">Noch nicht begonnen (0%)</div>
+                            <div style="color: #ffa500; font-size: 13px; margin-top: 5px; font-weight: 600;" data-translate="from_assessment_recommended">Vom Assessment empfohlen</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="path-item">
+                <a href="beratung-koordination-chat.html" class="card" style="display: block; text-decoration: none; color: inherit; border: 2px solid #ffa500; box-shadow: 0 2px 8px rgba(255, 165, 0, 0.15);">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 24px;"><img src="https://img.icons8.com/?id=37814&format=png&size=72" alt="Books"></span>
+                        <div style="flex: 1;">
+                            <div class="card-title">4. <span data-translate="counseling_coordination">Beratungs- und Alltagskoordination</span></div>
+                            <div style="color: #6c757d; font-size: 14px;" data-translate="not_started_0">Noch nicht begonnen (0%)</div>
+                            <div style="color: #ffa500; font-size: 13px; margin-top: 5px; font-weight: 600;" data-translate="from_assessment_recommended">Vom Assessment empfohlen</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="path-item">
+                <div class="card" style="background: #e8f5e9; border-color: #4caf50;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 24px;"><img src="https://img.icons8.com/?id=11695&format=png&size=72" alt="Check"></span>
+                        <div style="flex: 1;">
+                            <div class="card-title">5. <span data-translate="household_management">Gemeinsame Haushaltsführung</span></div>
+                            <div style="color: #6c757d; font-size: 14px;" data-translate="not_required">Nicht erforderlich</div>
+                            <div style="display: inline-block; margin-top: 5px; padding: 3px 8px; background: #e3f2fd; border: 1px solid #2196f3; border-radius: 4px; color: #1976d2; font-size: 12px; font-weight: 600;">
+                                <img src="https://img.icons8.com/?id=11695&format=png&size=16" alt="Check" style="vertical-align: middle;"> <span data-translate="test_passed">Test bestanden</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="path-item">
+                <a href="pflegesituationen-chat.html" class="card" style="display: block; text-decoration: none; color: inherit;">
+                    <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 24px;"><img src="https://img.icons8.com/?id=37814&format=png&size=72" alt="Books"></span>
+                        <div style="flex: 1;">
+                            <div class="card-title">6. <span data-translate="care_situations">Betreuung in Pflegesituationen</span></div>
+                            <div style="color: #6c757d; font-size: 14px;" data-translate="not_started_0">Noch nicht begonnen (0%)</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div style="margin-top: 30px; padding: 15px; background: white; border-radius: 8px; border: 1px solid #e0e0e0;">
+                <strong><img src="https://img.icons8.com/?id=1304&format=png&size=72" alt="Target" style="vertical-align: middle;"> <span data-translate="overall_progress">Gesamtfortschritt:</span> 23%</strong>
+                <div class="progress-bar" style="margin-top: 10px;">
+                    <div class="progress-fill" style="width: 23%; background: #C96B7E;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

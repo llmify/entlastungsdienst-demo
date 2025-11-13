@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - KI-Lerncoach</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="content">
+            <div class="logo">
+                <img src="logo.png" alt="Entlastungsdienst Logo">
+                <h1>KI-Lerncoach</h1>
+                <p>Willkommen zur psychosozialen<br>Betreuungs-Ausbildung</p>
+            </div>
+
+            <div class="form-group">
+                <label>Sprache / Gjuha / Language</label>
+                <select id="language-select">
+                    <option value="de">Deutsch</option>
+                    <option value="sq">Shqip</option>
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                    <option value="it">Italiano</option>
+                </select>
+            </div>
+
+            <a href="dashboard.html" class="btn" style="display: block; text-decoration: none; text-align: center;">
+                <img src="https://img.icons8.com/?id=15437&format=png&size=72" alt="Lock" style="margin-right: 10px; vertical-align: middle; filter: brightness(0) invert(1);">
+                Mit Microsoft anmelden
+            </a>
+        </div>
+    </div>
+    <script>
+        // Load saved language preference on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSelect = document.getElementById('language-select');
+            const savedLang = localStorage.getItem('preferredLanguage');
+
+            // If there's a saved language, select it in the dropdown
+            if (savedLang) {
+                languageSelect.value = savedLang;
+            }
+
+            // Save language preference when user changes it
+            languageSelect.addEventListener('change', function() {
+                localStorage.setItem('preferredLanguage', this.value);
+            });
+        });
+    </script>
+</body>
+</html>

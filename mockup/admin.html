@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geschäftsstelle - KI-Lerncoach</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="translations.js"></script>
+</head>
+<body>
+    <!-- User Toggle Buttons -->
+    <div class="user-toggle">
+        <a href="login.html" class="user-toggle-btn">Betreuer</a>
+        <a href="admin.html" class="user-toggle-btn active">Admin</a>
+    </div>
+
+    <div class="phone-frame">
+        <div class="header">
+            <a href="dashboard.html" class="menu-icon" style="text-decoration: none; color: inherit;"><img src="https://img.icons8.com/?id=26194&format=png&size=72" alt="Back" class="icon-white" style="vertical-align: middle;"></a>
+            <h1 data-translate="office">Geschäftsstelle</h1>
+            <span class="lang-selector"><img src="https://img.icons8.com/?id=3685&format=png&size=72" alt="Language" class="icon-white" style="vertical-align: middle;"> DE</span>
+        </div>
+        <div class="content">
+            <h2 style="margin-bottom: 20px;" data-translate="competency_overview">Kompetenz-Übersicht</h2>
+
+            <div class="search-box">
+                <input type="text" placeholder="Suche..." data-translate-placeholder="search">
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-translate="all">Alle</button>
+                <button class="filter-tab" data-translate="fulfilled">Erfüllt</button>
+                <button class="filter-tab" data-translate="open">Offen</button>
+            </div>
+
+            <div class="person-card">
+                <div class="person-header">Maria Muster</div>
+                <div class="person-email">maria.muster@example.ch</div>
+                <div class="competency-grid">
+                    <span class="competency-grid-item" data-translate="self_care">Selbstsorge</span>
+                    <span><img src="https://img.icons8.com/?id=11695&format=png&size=48" alt="Check"></span>
+                    <span class="competency-grid-item" data-translate="meaningful_activities">Sinnstiftende Alltagsgestaltung</span>
+                    <span><img src="https://img.icons8.com/?id=11695&format=png&size=48" alt="Check"></span>
+                    <span class="competency-grid-item" data-translate="social_participation">Soziale Teilhabe</span>
+                    <span><img src="https://img.icons8.com/?id=11695&format=png&size=48" alt="Check"></span>
+                    <span class="competency-grid-item" data-translate="counseling_coord_short">Beratungs- u. Alltagskoordination</span>
+                    <span><img src="https://img.icons8.com/?id=11695&format=png&size=48" alt="Check"></span>
+                    <span class="competency-grid-item" data-translate="household_mgmt_short">Gem. Haushaltsführung</span>
+                    <span><img src="https://img.icons8.com/?id=11695&format=png&size=48" alt="Check"></span>
+                    <span class="competency-grid-item" data-translate="care_situations">Betreuung in Pflegesituationen</span>
+                    <span><img src="https://img.icons8.com/?id=11695&format=png&size=48" alt="Check"></span>
+                </div>
+                <div class="person-status" style="color: #28a745;">
+                    <span data-translate="status">Status:</span> 6/6 <span data-translate="status_fulfilled">erfüllt</span> <img src="https://img.icons8.com/?id=11695&format=png&size=48" alt="Check" style="vertical-align: middle;">
+                </div>
+            </div>
+
+            <div class="person-card">
+                <div class="person-header">Ariana Hoxha</div>
+                <div class="person-email">ariana.hoxha@example.ch</div>
+                <div class="competency-grid">
+                    <span class="competency-grid-item" data-translate="self_care">Selbstsorge</span>
+                    <span><img src="https://img.icons8.com/?id=11695&format=png&size=48" alt="Check"></span>
+                    <span class="competency-grid-item" data-translate="meaningful_activities">Sinnstiftende Alltagsgestaltung</span>
+                    <span><img src="https://img.icons8.com/?id=15849&format=png&size=48" alt="In Progress"></span>
+                    <span class="competency-grid-item" data-translate="social_participation">Soziale Teilhabe</span>
+                    <span><img src="https://img.icons8.com/?id=46&format=png&size=48" alt="Not Done"></span>
+                    <span class="competency-grid-item" data-translate="counseling_coord_short">Beratungs- u. Alltagskoordination</span>
+                    <span><img src="https://img.icons8.com/?id=46&format=png&size=48" alt="Not Done"></span>
+                    <span class="competency-grid-item" data-translate="household_mgmt_short">Gem. Haushaltsführung</span>
+                    <span><img src="https://img.icons8.com/?id=46&format=png&size=48" alt="Not Done"></span>
+                    <span class="competency-grid-item" data-translate="care_situations">Betreuung in Pflegesituationen</span>
+                    <span><img src="https://img.icons8.com/?id=46&format=png&size=48" alt="Not Done"></span>
+                </div>
+                <div class="person-status" style="color: #ffa500;">
+                    <span data-translate="status">Status:</span> 1/6 <span data-translate="status_fulfilled">erfüllt</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Add placeholder translation support
+        function updatePlaceholders(lang) {
+            document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-translate-placeholder');
+                if (translations[lang] && translations[lang][key]) {
+                    element.placeholder = translations[lang][key];
+                }
+            });
+        }
+
+        // Override the switchLanguage function to include placeholder updates
+        const originalSwitchLanguage = switchLanguage;
+        switchLanguage = function(lang) {
+            originalSwitchLanguage(lang);
+            updatePlaceholders(lang);
+        };
+
+        // Update placeholders on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage') || 'de';
+            updatePlaceholders(savedLang);
+        });
+
+    </script>
+</body>
+</html>

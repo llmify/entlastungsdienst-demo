@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - KI-Lerncoach</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="translations.js"></script>
+</head>
+<body>
+    <!-- User Toggle Buttons -->
+    <div class="user-toggle">
+        <a href="login.html" class="user-toggle-btn active">Betreuer</a>
+        <a href="admin.html" class="user-toggle-btn">Admin</a>
+    </div>
+
+    <div class="phone-frame">
+        <!-- Sidebar Overlay -->
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2 data-translate="menu">Menü</h2>
+                <button class="sidebar-close" id="sidebar-close">×</button>
+            </div>
+            <div class="sidebar-content">
+                <ul class="sidebar-menu">
+                    <li class="sidebar-menu-item-wrapper">
+                        <a href="admin.html">
+                            <img src="https://img.icons8.com/?id=37932&format=png&size=72" alt="Office">
+                            <span data-translate="admin_panel">Geschäftsstelle</span>
+                        </a>
+                        <div class="sidebar-menu-disclaimer" data-translate="not_available_betreuer">Für Betreuer nicht verfügbar</div>
+                    </li>
+                    <li>
+                        <a href="#" onclick="alert('Hilfe-Seite wird geöffnet...'); return false;">
+                            <img src="https://img.icons8.com/?id=9659&format=png&size=72" alt="Help">
+                            <span data-translate="help">Hilfe</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html" class="logout-link">
+                            <img src="https://img.icons8.com/?id=2445&format=png&size=72" alt="Logout" style="filter: brightness(0) saturate(100%) invert(27%) sepia(94%) saturate(2613%) hue-rotate(343deg) brightness(89%) contrast(90%);">
+                            <span data-translate="logout">Abmelden</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-footer">
+                <div class="sidebar-user">
+                    <div class="sidebar-user-avatar">MM</div>
+                    <div class="sidebar-user-info">
+                        <div class="sidebar-user-name">Maria Muster</div>
+                        <div class="sidebar-user-email">maria.muster@example.ch</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header">
+            <span class="menu-icon" id="menu-icon" style="cursor: pointer;"><img src="https://img.icons8.com/?id=3096&format=png&size=72" alt="Menu" class="icon-white" style="vertical-align: middle;"></span>
+            <h1>KI-Lerncoach</h1>
+            <span class="lang-selector"><img src="https://img.icons8.com/?id=3685&format=png&size=72" alt="Language" class="icon-white" style="vertical-align: middle;"> DE</span>
+        </div>
+        <div class="content">
+            <div class="welcome">
+                <h2 data-translate="greeting">Hallo Maria!</h2>
+                <p data-translate="how_can_help">Wie kann ich dir heute helfen?</p>
+            </div>
+
+            <a href="assessment.html" class="card" style="display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit;">
+                <img src="https://img.icons8.com/?id=1304&format=png&size=96" alt="Target">
+                <div class="card-title" data-translate="assess_competencies">Kompetenzen einschätzen</div>
+            </a>
+
+            <a href="learning-path.html" class="card" style="display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit;">
+                <img src="https://img.icons8.com/?id=37814&format=png&size=96" alt="Books">
+                <div class="card-title" data-translate="develop_competencies">Kompetenzen entwickeln</div>
+            </a>
+
+            <a href="reflexion_chat.html" class="card" style="display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit;">
+                <img src="https://img.icons8.com/?id=3726&format=png&size=96" alt="Chat">
+                <div class="card-title" data-translate="reflect_experiences">Erfahrungen reflektieren</div>
+            </a>
+
+            <a href="competencies.html" class="card" style="display: flex; align-items: center; gap: 15px; text-decoration: none; color: inherit;">
+                <img src="https://img.icons8.com/?id=11169&format=png&size=96" alt="Certificate">
+                <div class="card-title" data-translate="my_competencies">Meine Kompetenzen</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Sidebar functionality
+        const menuIcon = document.getElementById('menu-icon');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOverlay = document.getElementById('sidebar-overlay');
+        const sidebarClose = document.getElementById('sidebar-close');
+
+        function openSidebar() {
+            sidebar.classList.add('active');
+            sidebarOverlay.classList.add('active');
+        }
+
+        function closeSidebar() {
+            sidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+        }
+
+        menuIcon.addEventListener('click', openSidebar);
+        sidebarClose.addEventListener('click', closeSidebar);
+        sidebarOverlay.addEventListener('click', closeSidebar);
+    </script>
+</body>
+</html>

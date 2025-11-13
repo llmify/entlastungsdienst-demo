@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflexion - KI-Lerncoach</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- User Toggle Buttons -->
+    <div class="user-toggle">
+        <a href="login.html" class="user-toggle-btn active">Betreuer</a>
+        <a href="admin.html" class="user-toggle-btn">Admin</a>
+    </div>
+    <div class="phone-frame">
+        <div class="header">
+            <a href="dashboard.html" class="menu-icon" style="text-decoration: none; color: inherit;"><img src="https://img.icons8.com/?id=26194&format=png&size=72" alt="Back" class="icon-white" style="vertical-align: middle;"></a>
+            <h1><img src="https://img.icons8.com/?id=3726&format=png&size=72" alt="Chat" class="icon-white" style="vertical-align: middle;"> Reflexion</h1>
+            <span class="lang-selector"><img src="https://img.icons8.com/?id=3685&format=png&size=72" alt="Language" class="icon-white" style="vertical-align: middle;"> DE</span>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message coach clearfix">
+                <div class="message-bubble">
+                    Hallo Maria! Ich bin hier, um dich zu unterstützen. Dieser Chat ist vertraulich – nur du hast Zugriff darauf, und die Inhalte werden ausschliesslich für deine Reflexion verwendet. Möchtest du mir von einer Situation aus deinem Betreuungsalltag erzählen, die dich gerade beschäftigt?
+                </div>
+                <div class="message-time">14:15</div>
+                <div class="feedback-buttons">
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2744&format=png&size=48" alt="Thumbs up"></button>
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2913&format=png&size=48" alt="Thumbs down"></button>
+                </div>
+            </div>
+
+            <div class="message user clearfix">
+                <div class="message-bubble">
+                    Ja, heute war Frau Müller sehr abweisend und wollte nicht mit mir reden. Sie hat sogar die Tür zugemacht, als ich kam. Ich fühlte mich hilflos und wusste nicht, was ich tun sollte.
+                </div>
+                <div class="message-time">14:17</div>
+            </div>
+
+            <div class="message coach clearfix">
+                <div class="message-bubble">
+                    Das klingt nach einer wirklich schwierigen Situation, Maria. Es ist verständlich, dass du dich hilflos gefühlt hast. Lass uns das gemeinsam anschauen: Was genau ist passiert, bevor Frau Müller die Tür geschlossen hat? Gab es vielleicht einen bestimmten Auslöser?
+                </div>
+                <div class="message-time">14:18</div>
+                <div class="feedback-buttons">
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2744&format=png&size=48" alt="Thumbs up"></button>
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2913&format=png&size=48" alt="Thumbs down"></button>
+                </div>
+            </div>
+
+            <div class="message user clearfix">
+                <div class="message-bubble">
+                    Ich hatte ihr vorgeschlagen, dass wir heute spazieren gehen könnten. Aber sie meinte nur "Nicht heute" und wirkte genervt.
+                </div>
+                <div class="message-time">14:20</div>
+            </div>
+
+            <div class="message coach clearfix">
+                <div class="message-bubble">
+                    Ich höre, dass du dir Mühe gegeben hast, eine Aktivität anzubieten. Wie hast du dich in dem Moment gefühlt, als Frau Müller genervt reagierte? Und was denkst du, könnte bei ihr gerade los sein?
+                </div>
+                <div class="message-time">14:21</div>
+                <div class="feedback-buttons">
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2744&format=png&size=48" alt="Thumbs up"></button>
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2913&format=png&size=48" alt="Thumbs down"></button>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" placeholder="Nachricht eingeben..." id="chat-input">
+            <button class="send-btn" onclick="sendMessage()"><img src="https://img.icons8.com/?id=398&format=png&size=72" alt="Send" class="icon-white" style="vertical-align: middle;"></button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+
+            if (message) {
+                const messagesContainer = document.getElementById('chat-messages');
+
+                // Add user message
+                const userMsg = document.createElement('div');
+                userMsg.className = 'message user clearfix';
+                userMsg.innerHTML = `
+                    <div class="message-bubble">${message}</div>
+                    <div class="message-time">${new Date().toLocaleTimeString('de-DE', {hour: '2-digit', minute:'2-digit'})}</div>
+                `;
+                messagesContainer.appendChild(userMsg);
+
+                // Clear input
+                input.value = '';
+
+                // Scroll to bottom
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+
+                // Simulate coach response
+                setTimeout(() => {
+                    const coachMsg = document.createElement('div');
+                    coachMsg.className = 'message coach clearfix';
+                    coachMsg.innerHTML = `
+                        <div class="message-bubble">Danke, dass du das mit mir teilst. Das klingt nach einer wichtigen Erfahrung. Wie hast du dich dabei gefühlt? Und was glaubst du, hat zu dieser Situation geführt?</div>
+                        <div class="message-time">${new Date().toLocaleTimeString('de-DE', {hour: '2-digit', minute:'2-digit'})}</div>
+                        <div class="feedback-buttons">
+                            <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2744&format=png&size=48" alt="Thumbs up"></button>
+                            <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2913&format=png&size=48" alt="Thumbs down"></button>
+                        </div>
+                    `;
+                    messagesContainer.appendChild(coachMsg);
+                    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                }, 1000);
+            }
+        }
+
+        // Allow Enter key to send message
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatInput = document.getElementById('chat-input');
+            if (chatInput) {
+                chatInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        sendMessage();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

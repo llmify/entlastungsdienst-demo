@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kompetenz-Einstufung - KI-Lerncoach</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="translations.js"></script>
+</head>
+<body>
+    <!-- User Toggle Buttons -->
+    <div class="user-toggle">
+        <a href="login.html" class="user-toggle-btn active">Betreuer</a>
+        <a href="admin.html" class="user-toggle-btn">Admin</a>
+    </div>
+    <div class="phone-frame">
+        <div class="header">
+            <a href="dashboard.html" class="menu-icon" style="text-decoration: none; color: inherit;"><img src="https://img.icons8.com/?id=26194&format=png&size=72" alt="Back" class="icon-white" style="vertical-align: middle;"></a>
+            <h1 data-translate="competency_assessment">Kompetenz-Einstufung</h1>
+            <span class="lang-selector"><img src="https://img.icons8.com/?id=3685&format=png&size=72" alt="Language" class="icon-white" style="vertical-align: middle;"> DE</span>
+        </div>
+        <div class="content">
+            <div class="info-box">
+                <p><strong><img src="https://img.icons8.com/?id=12581&format=png&size=72" alt="Note" style="vertical-align: middle;"> <span data-translate="assessment_intro">Dieser Test hilft uns, deine aktuellen Kompetenzen zu verstehen.</span></strong></p>
+                <br>
+                <p><img src="https://img.icons8.com/?id=1112&format=png&size=72" alt="Timer" style="vertical-align: middle;"> <strong data-translate="duration">Dauer:</strong> <span data-translate="duration_time">ca. 15-20 Minuten</span></p>
+                <br>
+                <p><img src="https://img.icons8.com/?id=15437&format=png&size=72" alt="Lock" style="vertical-align: middle;"> <strong data-translate="private">Privat:</strong> <span data-translate="private_text">Nur du siehst die Ergebnisse (ausser du gibst sie frei)</span></p>
+            </div>
+
+            <h3 style="margin: 20px 0 10px 0;"><img src="https://img.icons8.com/?id=11169&format=png&size=72" alt="Certificate" style="vertical-align: middle;"> <span data-translate="covered_areas">Abgedeckte Bereiche:</span></h3>
+            <div style="margin-left: 5px;">
+                <label style="display: flex; align-items: center; gap: 10px; margin: 10px 0; cursor: pointer;">
+                    <input type="checkbox" style="width: auto;" checked>
+                    <span data-translate="self_care">Selbstsorge</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; margin: 10px 0; cursor: pointer;">
+                    <input type="checkbox" style="width: auto;" checked>
+                    <span data-translate="meaningful_activities">Sinnstiftende Alltagsgestaltung</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; margin: 10px 0; cursor: pointer;">
+                    <input type="checkbox" style="width: auto;" checked>
+                    <span data-translate="social_participation">Soziale Teilhabe</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; margin: 10px 0; cursor: pointer;">
+                    <input type="checkbox" style="width: auto;" checked>
+                    <span data-translate="counseling_coordination">Beratungs- und Alltagskoordination</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; margin: 10px 0; cursor: pointer;">
+                    <input type="checkbox" style="width: auto;" checked>
+                    <span data-translate="household_management">Gemeinsame Haushaltsführung</span>
+                </label>
+                <label style="display: flex; align-items: center; gap: 10px; margin: 10px 0; cursor: pointer;">
+                    <input type="checkbox" style="width: auto;" checked>
+                    <span data-translate="care_situations">Betreuung in Pflegesituationen</span>
+                </label>
+            </div>
+
+            <div class="info-box" style="margin-top: 20px; background: #fff3cd; border-color: #ffa500;">
+                <p><img src="https://img.icons8.com/?id=75&format=png&size=72" alt="Idea" style="vertical-align: middle;"> <span data-translate="can_ask_questions">Du kannst jederzeit Fragen stellen, wenn etwas unklar ist.</span></p>
+            </div>
+
+            <a href="assessment-chat.html" class="btn" style="display: block; text-decoration: none; text-align: center; color: white;"><span data-translate="start_test">Test starten</span></a>
+        </div>
+    </div>
+</body>
+</html>
