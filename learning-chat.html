@@ -21,7 +21,7 @@
         <div class="chat-messages" id="chat-messages">
             <div class="message coach clearfix">
                 <div class="message-bubble">
-                    Hallo Maria! Lass uns heute über sinnstiftende Alltagsgestaltung sprechen. Eine wichtige Kompetenz ist es, gemeinsam mit der betreuten Person Aktivitäten zu planen, die ihren Interessen und Bedürfnissen entsprechen.
+                    Hallo Maria! Schön, dass du dich mit dem Thema "Sinnstiftende Alltagsgestaltung" beschäftigen möchtest. 🌟
                 </div>
                 <div class="message-time">10:15</div>
                 <div class="feedback-buttons">
@@ -32,7 +32,18 @@
 
             <div class="message coach clearfix">
                 <div class="message-bubble">
-                    Stell dir vor, Herr Meier zeigt Interesse an Gartenarbeit, kann aber aufgrund seiner eingeschränkten Mobilität nicht mehr viel tun. Welche Aktivitäten könntest du vorschlagen, die seine Leidenschaft für Pflanzen aufgreifen?
+                    In diesem Modul lernen wir, wie du gemeinsam mit der betreuten Person Aktivitäten planst, die ihren Interessen und Bedürfnissen entsprechen.
+                </div>
+                <div class="message-time">10:15</div>
+                <div class="feedback-buttons">
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2744&format=png&size=48" alt="Thumbs up"></button>
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2913&format=png&size=48" alt="Thumbs down"></button>
+                </div>
+            </div>
+
+            <div class="message coach clearfix">
+                <div class="message-bubble">
+                    Wie möchtest du heute lernen? Wähle eine Methode aus:
                 </div>
                 <div class="message-time">10:16</div>
                 <div class="feedback-buttons">
@@ -41,21 +52,41 @@
                 </div>
             </div>
 
-            <div class="message user clearfix">
-                <div class="message-bubble">
-                    Vielleicht könnte er Zimmerpflanzen pflegen oder wir könnten gemeinsam Kräuter auf der Fensterbank ziehen?
-                </div>
-                <div class="message-time">10:18</div>
-            </div>
+            <!-- Learning Method Options -->
+            <div style="padding: 0 15px 10px 15px;">
+                <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+                    <!-- Quiz Option -->
+                    <div onclick="selectLearningMethod('quiz')" style="background: linear-gradient(135deg, #E8EAF6 0%, #C5CAE9 100%); border-radius: 12px; padding: 16px; cursor: pointer; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); transition: transform 0.2s;">
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <img src="https://img.icons8.com/?id=56576&format=png&size=72" alt="Quiz" style="width: 32px; height: 32px;">
+                            <div style="flex: 1;">
+                                <div style="color: #3F51B5; font-weight: 600; font-size: 15px; margin-bottom: 3px;">Quiz</div>
+                                <div style="color: #5C6BC0; font-size: 12px;">Teste dein Wissen mit Fragen</div>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="message coach clearfix">
-                <div class="message-bubble">
-                    Sehr gute Ideen! Du hast erkannt, dass man Hobbies an die aktuellen Möglichkeiten anpassen kann. Zimmerpflanzen und Kräuter sind perfekt, weil sie im Sitzen gepflegt werden können. Was wäre noch wichtig bei der Planung solcher Aktivitäten?
-                </div>
-                <div class="message-time">10:19</div>
-                <div class="feedback-buttons">
-                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2744&format=png&size=48" alt="Thumbs up"></button>
-                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2913&format=png&size=48" alt="Thumbs down"></button>
+                    <!-- Rollenspiel Option -->
+                    <div onclick="selectLearningMethod('rollenspiel')" style="background: linear-gradient(135deg, #FCE4EC 0%, #F8BBD0 100%); border-radius: 12px; padding: 16px; cursor: pointer; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); transition: transform 0.2s;">
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <img src="https://img.icons8.com/?id=598&format=png&size=72" alt="Rollenspiel" style="width: 32px; height: 32px;">
+                            <div style="flex: 1;">
+                                <div style="color: #C2185B; font-weight: 600; font-size: 15px; margin-bottom: 3px;">Rollenspiel</div>
+                                <div style="color: #D81B60; font-size: 12px;">Übe in realistischen Szenarien</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fallbeispiele Option -->
+                    <div onclick="selectLearningMethod('fallbeispiele')" style="background: linear-gradient(135deg, #E0F2F1 0%, #B2DFDB 100%); border-radius: 12px; padding: 16px; cursor: pointer; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); transition: transform 0.2s;">
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <img src="https://img.icons8.com/?id=37917&format=png&size=72" alt="Fallbeispiele" style="width: 32px; height: 32px;">
+                            <div style="flex: 1;">
+                                <div style="color: #00796B; font-weight: 600; font-size: 15px; margin-bottom: 3px;">Fallbeispiele</div>
+                                <div style="color: #00897B; font-size: 12px;">Lerne aus echten Situationen</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -78,6 +109,16 @@
     </div>
 
     <script>
+        function selectLearningMethod(method) {
+            const methodNames = {
+                'quiz': 'Quiz',
+                'rollenspiel': 'Rollenspiel',
+                'fallbeispiele': 'Fallbeispiele'
+            };
+
+            alert(`Du hast "${methodNames[method]}" gewählt! Diese Funktion ist in der Vollversion verfügbar.`);
+        }
+
         function sendMessage() {
             const input = document.getElementById('chat-input');
             const message = input.value.trim();
