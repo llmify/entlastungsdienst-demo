@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinnstiftende Alltagsgestaltung - Option A</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- User Toggle Buttons -->
+    <div class="user-toggle">
+        <a href="../index.html" class="user-toggle-btn active">Betreuer</a>
+        <a href="../admin.html" class="user-toggle-btn">Admin</a>
+    </div>
+    <div class="phone-frame">
+        <div class="header">
+            <a href="../learning-path.html" class="menu-icon" style="text-decoration: none; color: inherit;"><img src="https://img.icons8.com/?id=26194&format=png&size=72" alt="Back" class="icon-white" style="vertical-align: middle;"></a>
+            <h1><img src="https://img.icons8.com/?id=37814&format=png&size=72" alt="Books" class="icon-white" style="vertical-align: middle;"> Alltagsgestaltung</h1>
+            <span class="lang-selector"><img src="https://img.icons8.com/?id=3685&format=png&size=72" alt="Language" class="icon-white" style="vertical-align: middle;"> DE</span>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message coach clearfix">
+                <div class="message-bubble">
+                    Hallo Maria! Schön, dass du dich mit dem Thema "Sinnstiftende Alltagsgestaltung" beschäftigen möchtest.
+                </div>
+                <div class="message-time">10:15</div>
+                <div class="feedback-buttons">
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2744&format=png&size=48" alt="Thumbs up"></button>
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2913&format=png&size=48" alt="Thumbs down"></button>
+                </div>
+            </div>
+
+            <div class="message coach clearfix">
+                <div class="message-bubble">
+                    In diesem Modul lernen wir, wie du gemeinsam mit der betreuten Person Aktivitäten planst, die ihren Interessen und Bedürfnissen entsprechen.
+                </div>
+                <div class="message-time">10:15</div>
+                <div class="feedback-buttons">
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2744&format=png&size=48" alt="Thumbs up"></button>
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2913&format=png&size=48" alt="Thumbs down"></button>
+                </div>
+            </div>
+
+            <div class="message coach clearfix">
+                <div class="message-bubble">
+                    Basierend auf deinem Lernprofil empfehle ich dir für dieses Modul die folgende Lernmethode:
+                </div>
+                <div class="message-time">10:16</div>
+                <div class="feedback-buttons">
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2744&format=png&size=48" alt="Thumbs up"></button>
+                    <button onclick="alert('Danke für dein Feedback!')"><img src="https://img.icons8.com/?id=2913&format=png&size=48" alt="Thumbs down"></button>
+                </div>
+            </div>
+
+            <!-- Single Recommended Learning Method -->
+            <div style="padding: 0 15px 10px 15px;">
+                <div style="background: linear-gradient(135deg, #FCE4EC 0%, #F8BBD0 100%); border: 2px solid #C2185B; border-radius: 12px; padding: 18px; box-shadow: 0 3px 8px rgba(194, 24, 91, 0.15);">
+                    <div style="display: flex; align-items: flex-start; gap: 12px;">
+                        <img src="https://img.icons8.com/?id=598&format=png&size=72" alt="Rollenspiel" style="width: 36px; height: 36px;">
+                        <div style="flex: 1;">
+                            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 6px;">
+                                <div style="color: #C2185B; font-weight: 700; font-size: 16px;">Rollenspiel</div>
+                                <span style="background: #C2185B; color: white; font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 10px; text-transform: uppercase; letter-spacing: 0.3px;">Empfohlen</span>
+                            </div>
+                            <div style="color: #880E4F; font-size: 13px; line-height: 1.5; margin-bottom: 10px;">
+                                Praktisches Üben in realistischen Szenarien ist ideal für dich, um Unsicherheiten im Umgang mit Widerstand abzubauen.
+                            </div>
+                            <button onclick="alert('Rollenspiel wird gestartet...')" style="width: 100%; background: #C2185B; color: white; border: none; border-radius: 8px; padding: 10px; font-weight: 600; font-size: 14px; cursor: pointer;">
+                                Jetzt starten
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Bar Container -->
+        <div style="background: white; border-top: 1px solid #ddd; padding: 12px 15px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <span style="font-size: 14px; font-weight: 600; color: #6c757d;">Fortschritt</span>
+                <span style="font-size: 14px; font-weight: 600; color: #C96B7E;">40%</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill warning" style="width: 40%;"></div>
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" placeholder="Nachricht eingeben..." id="chat-input">
+            <button class="send-btn" onclick="alert('Nachricht senden')"><img src="https://img.icons8.com/?id=398&format=png&size=72" alt="Send" class="icon-white" style="vertical-align: middle;"></button>
+        </div>
+    </div>
+
+    <script>
+        function selectLearningMethod(method) {
+            alert('Lernmethode ausgewählt: ' + method);
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+            if (message) {
+                alert('Nachricht: ' + message);
+                input.value = '';
+            }
+        }
+    </script>
+</body>
+</html>
