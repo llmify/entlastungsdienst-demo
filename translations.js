@@ -3,17 +3,19 @@ const translations = {
     de: {
         // Dashboard
         'greeting': 'Hallo Maria!',
+        'welcome_message': 'Willkommen zur psychosozialen<br>Betreuungs-Ausbildung',
+        'login_button': 'Anmelden (Microsoft Konto)',
         'how_can_help': 'Wie kann ich dir heute helfen?',
-        'assess_competencies': 'Kompetenzen einschätzen',
-        'develop_competencies': 'Kompetenzen entwickeln',
+        'assess_competencies': 'Mein Wissen einschätzen',
+        'develop_competencies': 'Neues lernen',
         'reflect_experiences': 'Erfahrungen reflektieren',
-        'my_competencies': 'Meine Kompetenzen',
+        'my_competencies': 'Mein Wissen',
 
         // Assessment
-        'competency_assessment': 'Kompetenz-Einstufung',
-        'assessment_intro': 'Dieser Test hilft uns, deine aktuellen Kompetenzen zu verstehen.',
+        'competency_assessment': 'Mein Wissen testen',
+        'assessment_intro': 'Dieser Test hilft uns, dein aktuelles Wissen zu verstehen.',
         'duration': 'Dauer:',
-        'duration_time': 'ca. 15-20 Minuten',
+        'duration_time': 'ca. 15-20 Minuten (Pause jederzeit möglich)',
         'private': 'Privat:',
         'private_text': 'Nur du siehst die Ergebnisse (ausser du gibst sie frei)',
         'covered_areas': 'Abgedeckte Bereiche:',
@@ -21,10 +23,10 @@ const translations = {
         'start_test': 'Test starten',
 
         // Learning Path
-        'my_learning_path': 'Mein Lernpfad',
+        'my_learning_path': 'Mein Weg',
         'your_personalized_path': 'Dein personalisierter Lernweg',
         'assessment_recommendation': 'Dein personalisierter Lernweg:',
-        'assessment_recommendation_text': 'Bereiche mit Entwicklungsbedarf stehen oben, bereits demonstrierte Kompetenzen sind übersprungen.',
+        'assessment_recommendation_text': 'Bereiche mit Tipps für dich stehen oben, bereits vorhandenes Wissen ist übersprungen.',
         'completed': 'Abgeschlossen',
         'completed_100': 'Abgeschlossen (100%)',
         'in_progress': 'In Arbeit',
@@ -60,7 +62,7 @@ const translations = {
 
         // Admin Page
         'office': 'Geschäftsstelle',
-        'competency_overview': 'Kompetenz-Übersicht',
+        'competency_overview': 'Übersicht',
         'search': 'Suche...',
         'all': 'Alle',
         'fulfilled': 'Erfüllt',
@@ -87,14 +89,16 @@ const translations = {
     en: {
         // Dashboard
         'greeting': 'Hello Maria!',
+        'welcome_message': 'Welcome to Psychosocial<br>Care Training',
+        'login_button': 'Login (Microsoft Account)',
         'how_can_help': 'How can I help you today?',
-        'assess_competencies': 'Assess Competencies',
-        'develop_competencies': 'Develop Competencies',
+        'assess_competencies': 'Check My Knowledge',
+        'develop_competencies': 'Learn Something New',
         'reflect_experiences': 'Reflect on Experiences',
         'my_competencies': 'My Competencies',
 
         // Assessment
-        'competency_assessment': 'Competency Assessment',
+        'competency_assessment': 'Check My Knowledge',
         'assessment_intro': 'This test helps us understand your current competencies.',
         'duration': 'Duration:',
         'duration_time': 'approx. 15-20 minutes',
@@ -105,10 +109,10 @@ const translations = {
         'start_test': 'Start Test',
 
         // Learning Path
-        'my_learning_path': 'My Learning Path',
+        'my_learning_path': 'My Journey',
         'your_personalized_path': 'Your Personalized Learning Journey',
         'assessment_recommendation': 'Your Personalized Learning Path:',
-        'assessment_recommendation_text': 'Areas with development needs are shown first, already demonstrated competencies are skipped.',
+        'assessment_recommendation_text': 'Areas with tips for you are shown first, already known topics are skipped.',
         'completed': 'Completed',
         'completed_100': 'Completed (100%)',
         'in_progress': 'In Progress',
@@ -144,7 +148,7 @@ const translations = {
 
         // Admin Page
         'office': 'Office',
-        'competency_overview': 'Competency Overview',
+        'competency_overview': 'Overview',
         'search': 'Search...',
         'all': 'All',
         'fulfilled': 'Fulfilled',
@@ -171,14 +175,16 @@ const translations = {
     fr: {
         // Dashboard
         'greeting': 'Bonjour Maria!',
+        'welcome_message': 'Bienvenue à la Formation<br>Psychosociale',
+        'login_button': 'Connexion (Compte Microsoft)',
         'how_can_help': 'Comment puis-je vous aider aujourd\'hui?',
-        'assess_competencies': 'Évaluer les Compétences',
-        'develop_competencies': 'Développer les Compétences',
+        'assess_competencies': 'Vérifier mes Connaissances',
+        'develop_competencies': 'Apprendre du Nouveau',
         'reflect_experiences': 'Réfléchir aux Expériences',
         'my_competencies': 'Mes Compétences',
 
         // Assessment
-        'competency_assessment': 'Évaluation des Compétences',
+        'competency_assessment': 'Tester mes connaissances',
         'assessment_intro': 'Ce test nous aide à comprendre vos compétences actuelles.',
         'duration': 'Durée:',
         'duration_time': 'environ 15-20 minutes',
@@ -189,10 +195,10 @@ const translations = {
         'start_test': 'Démarrer le Test',
 
         // Learning Path
-        'my_learning_path': 'Mon Parcours d\'Apprentissage',
+        'my_learning_path': 'Mon Parcours',
         'your_personalized_path': 'Votre Parcours d\'Apprentissage Personnalisé',
         'assessment_recommendation': 'Votre Parcours d\'Apprentissage Personnalisé:',
-        'assessment_recommendation_text': 'Les domaines avec besoins de développement sont affichés en premier, les compétences déjà démontrées sont ignorées.',
+        'assessment_recommendation_text': 'Les domaines avec des conseils pour vous sont affichés en premier.',
         'completed': 'Terminé',
         'completed_100': 'Terminé (100%)',
         'in_progress': 'En Cours',
@@ -228,7 +234,7 @@ const translations = {
 
         // Admin Page
         'office': 'Bureau',
-        'competency_overview': 'Aperçu des Compétences',
+        'competency_overview': 'Vue d\'ensemble',
         'search': 'Recherche...',
         'all': 'Tous',
         'fulfilled': 'Remplis',
@@ -255,14 +261,16 @@ const translations = {
     it: {
         // Dashboard
         'greeting': 'Ciao Maria!',
+        'welcome_message': 'Benvenuti alla Formazione<br>Psicosociale',
+        'login_button': 'Accedi (Account Microsoft)',
         'how_can_help': 'Come posso aiutarti oggi?',
-        'assess_competencies': 'Valutare le Competenze',
-        'develop_competencies': 'Sviluppare le Competenze',
+        'assess_competencies': 'Verificare le mie Conoscenze',
+        'develop_competencies': 'Imparare Qualcosa di Nuovo',
         'reflect_experiences': 'Riflettere sulle Esperienze',
         'my_competencies': 'Le Mie Competenze',
 
         // Assessment
-        'competency_assessment': 'Valutazione delle Competenze',
+        'competency_assessment': 'Testare le mie conoscenze',
         'assessment_intro': 'Questo test ci aiuta a comprendere le tue competenze attuali.',
         'duration': 'Durata:',
         'duration_time': 'circa 15-20 minuti',
@@ -273,10 +281,10 @@ const translations = {
         'start_test': 'Inizia il Test',
 
         // Learning Path
-        'my_learning_path': 'Il Mio Percorso di Apprendimento',
+        'my_learning_path': 'Il Mio Percorso',
         'your_personalized_path': 'Il Tuo Percorso di Apprendimento Personalizzato',
         'assessment_recommendation': 'Il Tuo Percorso di Apprendimento Personalizzato:',
-        'assessment_recommendation_text': 'Le aree con esigenze di sviluppo sono mostrate per prime, le competenze già dimostrate sono saltate.',
+        'assessment_recommendation_text': 'Le aree con consigli per te vengono mostrate per prime.',
         'completed': 'Completato',
         'completed_100': 'Completato (100%)',
         'in_progress': 'In Corso',
@@ -312,7 +320,7 @@ const translations = {
 
         // Admin Page
         'office': 'Ufficio',
-        'competency_overview': 'Panoramica delle Competenze',
+        'competency_overview': 'Panoramica',
         'search': 'Cerca...',
         'all': 'Tutti',
         'fulfilled': 'Completati',
@@ -339,14 +347,16 @@ const translations = {
     sq: {
         // Dashboard
         'greeting': 'Përshëndetje Maria!',
+        'welcome_message': 'Mirësevini në Trajnimin<br>Psikosocial',
+        'login_button': 'Hyr (Llogari Microsoft)',
         'how_can_help': 'Si mund të të ndihmoj sot?',
-        'assess_competencies': 'Vlerëso Kompetencat',
-        'develop_competencies': 'Zhvillo Kompetencat',
+        'assess_competencies': 'Kontrollo Njohuritë e Mia',
+        'develop_competencies': 'Mëso Diçka të Re',
         'reflect_experiences': 'Reflekto mbi Përvojat',
         'my_competencies': 'Kompetencat e Mia',
 
         // Assessment
-        'competency_assessment': 'Vlerësimi i Kompetencave',
+        'competency_assessment': 'Testo njohuritë e mia',
         'assessment_intro': 'Ky test na ndihmon të kuptojmë kompetencat tuaja aktuale.',
         'duration': 'Kohëzgjatja:',
         'duration_time': 'rreth 15-20 minuta',
@@ -357,10 +367,10 @@ const translations = {
         'start_test': 'Fillo Testin',
 
         // Learning Path
-        'my_learning_path': 'Rruga Ime e Mësimit',
+        'my_learning_path': 'Rruga Ime',
         'your_personalized_path': 'Rruga Juaj e Personalizuar e Mësimit',
         'assessment_recommendation': 'Shtegu Juaj i Personalizuar i Mësimit:',
-        'assessment_recommendation_text': 'Fushat me nevoja për zhvillim tregohen të parat, kompetencat e demonstruara janë të anashkaluara.',
+        'assessment_recommendation_text': 'Fushat me këshilla për ju shfaqen të parat.',
         'completed': 'Përfunduar',
         'completed_100': 'Përfunduar (100%)',
         'in_progress': 'Në Progres',
@@ -396,7 +406,7 @@ const translations = {
 
         // Admin Page
         'office': 'Zyra',
-        'competency_overview': 'Përmbledhja e Kompetencave',
+        'competency_overview': 'Përmbledhje',
         'search': 'Kërko...',
         'all': 'Të Gjitha',
         'fulfilled': 'Plotësuar',
@@ -430,7 +440,7 @@ function switchLanguage(lang) {
     document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
         if (translations[lang] && translations[lang][key]) {
-            element.textContent = translations[lang][key];
+            element.innerHTML = translations[lang][key];
         }
     });
 
@@ -449,7 +459,7 @@ function switchLanguage(lang) {
 }
 
 // Initialize language on page load
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Get saved language or default to German
     const savedLang = localStorage.getItem('preferredLanguage') || 'de';
     switchLanguage(savedLang);
@@ -458,7 +468,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const langSelectors = document.querySelectorAll('.lang-selector');
     langSelectors.forEach(selector => {
         selector.style.cursor = 'pointer';
-        selector.addEventListener('click', function() {
+        selector.addEventListener('click', function () {
             const currentLang = localStorage.getItem('preferredLanguage') || 'de';
             const languages = ['de', 'sq', 'en', 'fr', 'it'];
             const currentIndex = languages.indexOf(currentLang);

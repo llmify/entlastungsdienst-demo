@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - KI-Lerncoach</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="translations.js"></script>
 </head>
+
 <body>
     <div class="phone-frame">
         <div class="content">
             <div class="logo">
                 <img src="logo.png" alt="Entlastungsdienst Logo">
                 <h1>KI-Lerncoach</h1>
-                <p>Willkommen zur psychosozialen<br>Betreuungs-Ausbildung</p>
+                <p data-translate="welcome_message">Willkommen zur psychosozialen<br>Betreuungs-Ausbildung</p>
             </div>
 
             <div class="form-group">
@@ -27,27 +30,36 @@
             </div>
 
             <a href="dashboard.html" class="btn" style="display: block; text-decoration: none; text-align: center;">
-                <img src="https://img.icons8.com/?id=15437&format=png&size=72" alt="Lock" style="margin-right: 10px; vertical-align: middle; filter: brightness(0) invert(1);">
-                Mit Microsoft anmelden
+                <img src="https://img.icons8.com/?id=15437&format=png&size=72" alt="Lock"
+                    style="margin-right: 10px; vertical-align: middle; filter: brightness(0) invert(1);">
+                <span data-translate="login_button">Anmelden (Microsoft Konto)</span>
             </a>
         </div>
     </div>
     <script>
         // Load saved language preference on page load
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const languageSelect = document.getElementById('language-select');
-            const savedLang = localStorage.getItem('preferredLanguage');
+            const savedLang = localStorage.getItem('preferredLanguage') || 'de';
 
-            // If there's a saved language, select it in the dropdown
-            if (savedLang) {
-                languageSelect.value = savedLang;
+            // Set dropdown value
+            languageSelect.value = savedLang;
+
+            // Apply translations immediately
+            if (typeof switchLanguage === 'function') {
+                switchLanguage(savedLang);
             }
 
-            // Save language preference when user changes it
-            languageSelect.addEventListener('change', function() {
-                localStorage.setItem('preferredLanguage', this.value);
+            // Save language preference and update translations when user changes it
+            languageSelect.addEventListener('change', function () {
+                const newLang = this.value;
+                localStorage.setItem('preferredLanguage', newLang);
+                if (typeof switchLanguage === 'function') {
+                    switchLanguage(newLang);
+                }
             });
         });
     </script>
 </body>
+
 </html>
